@@ -5,6 +5,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { team } from "@/data";
 import AwardSection from "@/components/AwardSection";
 import Navin from "@/assets/team/navin-director-storytelling-photographer.jpg";
+import ElegantLine from "@/components/ElegantLine";
 
 const About = () => {
   return (
@@ -24,7 +25,7 @@ const About = () => {
                   className="w-full max-w-md mx-auto rounded-lg shadow-lg"
                 />
                 <h3 className="font-playfair text-2xl font-bold text-foreground text-center mt-6">
-                  Mr. Navin Sawant
+                  MR. NAVIN SAWANT
                 </h3>
                 <p className="text-center">
                   FOUNDER, Unicorn Pixel Photography
@@ -32,9 +33,10 @@ const About = () => {
               </div>
               
               <div className="animate-fade-in">
-                <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-6">
+                <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-6 text-center sm:text-center lg:text-left">
                   Meet Our Founder
                 </h2>
+                <ElegantLine/>
                 <p className="  text-lg text-muted-foreground mb-4 leading-relaxed">
                   At the heart of our venture is Mr. Navin Sawant, a visionary with a keen eye for detail and an unwavering passion for storytelling through the lens. With every click, he aims not just to capture an image, but to freeze a moment in time — a moment filled with emotion, love, joy, or quiet beauty.
                 </p>
@@ -54,7 +56,6 @@ const About = () => {
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16">
               <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-6">
-                Our Unicorn Pixel Family
                 Our Unicorn Pixel Family
               </h2>
               <div className="w-24 h-1 bg-primary mx-auto"></div>

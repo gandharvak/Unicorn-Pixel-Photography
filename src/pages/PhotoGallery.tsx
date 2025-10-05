@@ -18,7 +18,7 @@ const PhotoGallery = () => {
           <div className="container mx-auto max-w-8xl">
             <div className="text-center mb-16">
               <h1 className="font-playfair text-4xl md:text-6xl font-bold text-foreground mb-8 animate-fade-in">
-                Photo Gallery
+                Stories
               </h1>
               <div className="w-24 h-1 bg-primary mx-auto"></div>
             </div>

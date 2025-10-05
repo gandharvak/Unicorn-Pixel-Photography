@@ -20,11 +20,12 @@ const BookUs = () => {
     eventStartDate: "",
     eventEndDate: "",
     events: [] as string[],
-    budget: "",
+    budget: "", // empty string initially
     location: "",
     services: [] as string[],
     message: ""
   });
+
 
   const handleEventChange = (event: string, checked: boolean) => {
     if (checked) {
@@ -82,7 +83,7 @@ const BookUs = () => {
       !phoneNumber.trim() ||
       !eventStartDate ||
       !eventEndDate ||
-      !budget.trim() ||
+      !budget ||
       !location.trim() ||
       !message.trim()
     ) {
@@ -135,6 +136,18 @@ const BookUs = () => {
       });
       return;
     }
+
+    // Validate multi-selects
+    const budgetNumber = Number(formData.budget);
+
+    if (isNaN(budgetNumber) || budgetNumber <= 0) {
+      toast({
+        title: "Please enter a valid event budget",
+        variant: "destructive",
+      });
+      return;
+    }
+
 
     if (services.length === 0) {
       toast({
@@ -201,6 +214,12 @@ const BookUs = () => {
   const eventOptions = ["Haldi", "Mehendi", "Sangeet", "Wedding", "Reception", "Engagement", "Other"];
   const serviceOptions = ["Photography", "Films", "Both"];
 
+
+  const today = new Date().toISOString().split("T")[0];
+  const maxDate = new Date();
+  maxDate.setFullYear(maxDate.getFullYear() + 2);
+  const max = maxDate.toISOString().split("T")[0];
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -209,7 +228,7 @@ const BookUs = () => {
         {/* Header Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-background to-secondary/20">
           <div className="container mx-auto max-w-4xl text-center">
-            <h1 className="font-playfair text-4xl md:text-6xl font-bold text-foreground mb-8 animate-fade-in">
+            <h1 className="font-playfair text-3xl md:text-6xl font-bold text-foreground mb-8 animate-fade-in">
               Let's Create Something Beautiful Together
             </h1>
             <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
@@ -235,11 +254,11 @@ const BookUs = () => {
         </section>
 
         {/* Form Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-3xl">
+        <section className="py-10 lg:py-20 px-4">
+          <div className=" mx-auto max-w-3xl">
             <Card>
               <CardHeader>
-                <CardTitle className="font-playfair text-3xl text-center text-foreground">
+                <CardTitle className="text-3xl text-center text-primary">
                   Wedding Enquiry Form
                 </CardTitle>
               </CardHeader>
@@ -294,20 +313,27 @@ const BookUs = () => {
                         value={formData.eventStartDate}
                         onChange={(e) => setFormData(prev => ({ ...prev, eventStartDate: e.target.value }))}
                         required
+                        min={today}
+                        max={max}
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="eventEndDate" className="  font-semibold">
+                      <Label htmlFor="eventEndDate" className="font-semibold">
                         Event End Date
                       </Label>
                       <Input
                         id="eventEndDate"
                         type="date"
                         value={formData.eventEndDate}
-                        onChange={(e) => setFormData(prev => ({ ...prev, eventEndDate: e.target.value }))}
+                        onChange={(e) =>
+                          setFormData((prev) => ({ ...prev, eventEndDate: e.target.value }))
+                        }
                         required
+                        min={today}
+                        max={max}
                       />
                     </div>
+
                   </div>
 
                   <div className="space-y-3">
@@ -336,10 +362,20 @@ const BookUs = () => {
                     </Label>
                     <Input
                       id="budget"
+                      type="number"
+                      inputMode="numeric"
+                      pattern="[0-9]*"
                       value={formData.budget}
-                      onChange={(e) => setFormData(prev => ({ ...prev, budget: e.target.value }))}
-                      placeholder="e.g., ₹2,00,000 - ₹3,00,000"
+                      onChange={(e) =>
+                        setFormData((prev) => ({
+                          ...prev,
+                          budget: e.target.value, // keep as string
+                        }))
+                      }
+                      placeholder="e.g. 200000"
                     />
+
+
                   </div>
 
                   <div className="space-y-2">

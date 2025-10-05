@@ -1,11 +1,27 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { portfolioImages } from "@/assets/portfolio";
-import { X } from "lucide-react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const Portfolio = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+  const handleNext = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (selectedIndex !== null) {
+      setSelectedIndex((selectedIndex + 1) % portfolioImages.length);
+    }
+  };
+
+  const handlePrev = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (selectedIndex !== null) {
+      setSelectedIndex(
+        (selectedIndex - 1 + portfolioImages.length) % portfolioImages.length
+      );
+    }
+  };
 
   return (
     <div className="min-h-screen">
@@ -31,12 +47,12 @@ const Portfolio = () => {
         {/* Masonry Photo Grid */}
         <section className="py-12 px-4 bg-gradient-to-b from-background to-secondary/20">
           <div className="container mx-auto max-w-7xl">
-            <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+            <div className="columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-2 md:gap-4 space-y-2 md:space-y-4">
               {portfolioImages.map((image, index) => (
                 <div
                   key={index}
                   className="break-inside-avoid overflow-hidden rounded-lg cursor-pointer group"
-                  onClick={() => setSelectedImage(image)}
+                  onClick={() => setSelectedIndex(index)}
                 >
                   <img
                     src={image}
@@ -51,34 +67,54 @@ const Portfolio = () => {
       </main>
 
       {/* Modal for full image */}
-      {selectedImage && (
-
+      {selectedIndex !== null && (
         <div
           className="fixed inset-0 z-[60] bg-black/90 flex items-center justify-center"
-          onClick={() => setSelectedImage(null)}
+          onClick={() => setSelectedIndex(null)}
         >
           <div
-            className="relative"
+            className="relative flex items-center"
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Previous Arrow */}
             <button
-              onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 z-10 bg-white/90 rounded-full p-2 hover:bg-white transition-colors"
+              onClick={handlePrev}
+              className="absolute left-0 md:-left-20 bg-primary rounded-full p-2 m-4 transition"
             >
-              <X className="h-6 w-6" />
+              <ChevronLeft className="h-4 w-4 text-white" />
             </button>
+
+            {/* Close Button */}
+            <button
+              onClick={() => setSelectedIndex(null)}
+              className="absolute top-4 right-4 z-10 bg-primary rounded-full p-2 text-white transition-colors"
+            >
+              <X className="h-3 w-3" />
+            </button>
+
+            {/* Image */}
             <img
-              src={selectedImage}
-              alt="Fullscreen"
+              src={portfolioImages[selectedIndex]}
+              alt={`Fullscreen ${selectedIndex + 1}`}
               className="max-w-[90vw] max-h-[80vh] rounded-lg shadow-lg"
             />
+
+            {/* Download Button */}
             <a
-              href={selectedImage}
+              href={portfolioImages[selectedIndex]}
               download
-              className="absolute bottom-4 right-4 bg-primary text-white px-4 py-2 rounded shadow hover:bg-primary/80 transition-colors"
+              className="absolute bottom-4 right-4 bg-primary text-white px-2 py-1 rounded shadow hover:bg-primary/80 transition-colors"
             >
               Download
             </a>
+
+            {/* Next Arrow */}
+            <button
+              onClick={handleNext}
+              className="absolute right-0 md:-right-20 bg-primary rounded-full p-2 m-4 transition"
+            >
+              <ChevronRight className="h-4 w-4 text-white" />
+            </button>
           </div>
         </div>
       )}

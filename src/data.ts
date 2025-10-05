@@ -16,7 +16,8 @@ export const email = "info@unicornpixelphotography.com"
 export const phone1 = "+91 9119549062"
 export const phone2 = "+91 9119599340"
 export const address = "1st Floor, Shop No.27, Unicorn Pixel Photography, Greenland County Commercial Complex, Near Jadhavar School, Greenland County, Manajinagar, Narhe, Pune, Maharashtra 411041"
-
+export const maps = "https://maps.app.goo.gl/McrucHVAKM6LcHH18"
+export const mapsEmbed= "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3784.6636859891996!2d73.82536!3d18.453573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc295e83692d523%3A0xba1a55696b09e7d8!2sUnicorn%20Pixel%20Photography!5e0!3m2!1sen!2sin!4v1759685177423!5m2!1sen!2sin"
 
 export const testimonials = [
   {

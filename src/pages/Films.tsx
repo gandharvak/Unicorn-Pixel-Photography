@@ -20,16 +20,16 @@ const Films = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      
+
       <main className="pt-20">
         {/* Header Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-background to-secondary/20">
           <div className="container mx-auto max-w-4xl text-center">
             <h1 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in">
-             Timeless Love Captured on Film
+              Timeless Love Captured on Film
             </h1>
             <p className="  text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-slide-up">
-              Cinematic love stories that capture the emotion, joy, and beauty of your special day. 
+              Cinematic love stories that capture the emotion, joy, and beauty of your special day.
               Each film is crafted with care to preserve your precious moments forever.
             </p>
             <div className="w-24 h-1 bg-primary mx-auto mt-8"></div>
@@ -39,17 +39,18 @@ const Films = () => {
         {/* Video Grid */}
         <section className="py-2 px-4">
           <div className="container mx-auto max-w-8xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
               {youtubeVideos.map((video, index) => (
-                <Card 
-                  key={video.id + index} 
+                <Card
+                  key={video.id + index}
                   className="group cursor-pointer overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
                   onClick={() => openVideo(video.id)}
                 >
-                  <div className="relative">
-                    <img 
+                  <div className="relative w-full aspect-video"> {/* Maintain 16:9 rectangle */}
+                    <img
                       src={video.thumbnail}
-                      className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg"
+                      alt={video.thumbnail}
                     />
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -57,11 +58,11 @@ const Films = () => {
                         <Play className="h-6 w-6 text-primary-foreground fill-current" />
                       </div>
                     </div>
-                    
                   </div>
                 </Card>
               ))}
             </div>
+
           </div>
         </section>
       </main>

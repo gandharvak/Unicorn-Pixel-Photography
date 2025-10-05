@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { address, email, phone1, phone2 } from "@/data";
+import { address, email, mapsEmbed, phone1, phone2 } from "@/data";
 
 const ContactUs = () => {
   const { toast } = useToast();
@@ -109,7 +109,7 @@ const ContactUs = () => {
 
       <main className="pt-20">
         <section className="py-20 px-4">
-          <div className="container mx-auto max-w-6xl">
+          <div className=" mx-auto max-w-6xl">
             <div className="text-center mb-16">
               <h1 className="font-playfair text-4xl md:text-6xl font-bold text-foreground mb-8 animate-fade-in">
                 Contact Us
@@ -121,19 +121,14 @@ const ContactUs = () => {
               {/* Contact Information */}
               <div className="space-y-8">
                 <Card>
-                  <CardHeader>
-                    <CardTitle className="font-playfair text-2xl text-foreground">
-                      Contact Information
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
-                    <div className="flex items-start space-x-4">
-                      <Mail className="h-6 w-6 text-primary mt-1" />
+                  <CardContent className="space-y-6 py-4">
+                    <div className="flex items-start space-x-4 overflow-hidden">
+                      <Mail className="h-6 w-6 text-primary mt-1 shrink-0" />
                       <div>
-                        <p className="  font-semibold text-foreground">Email</p>
+                        <p className="font-semibold text-foreground">Email</p>
                         <a
-                          href="mailto:info@unicornpixelphotography.com"
-                          className="  text-muted-foreground hover:text-primary transition-colors"
+                          href={`mailto:${email}`}
+                          className="text-muted-foreground hover:text-primary transition-colors"
                         >
                           {email}
                         </a>
@@ -147,7 +142,7 @@ const ContactUs = () => {
                         <div className="space-y-1">
                           <a
                             href={`tel:${phone1}`}
-                            className="  text-muted-foreground hover:text-primary transition-colors block"
+                            className="text-muted-foreground hover:text-primary transition-colors block"
                           >
                             {phone1}
                           </a>
@@ -162,7 +157,7 @@ const ContactUs = () => {
                     </div>
 
                     <div className="flex items-start space-x-3">
-                      <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                      <MapPin className="h-6 w-6 text-primary shrink-0 mt-1" />
                       <div>
                         <p className="text-muted-foreground">
                           {address}
@@ -177,7 +172,7 @@ const ContactUs = () => {
                   <CardContent className="p-0">
                     <div className="aspect-video w-full">
                       <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.7429866663594!2d73.7689!3d18.4594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2955b7f5e4b05%3A0x8b8b8b8b8b8b8b8b!2sNarhe%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890123"
+                        src={mapsEmbed}
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}

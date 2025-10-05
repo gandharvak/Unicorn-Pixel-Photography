@@ -10,6 +10,19 @@ const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
+  // Inside your component
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 700);
@@ -23,7 +36,7 @@ const Navigation = () => {
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Portfolio", path: "/portfolio" },
-    { name: "Photo Gallery", path: "/gallery" },
+    { name: "Stories", path: "/stories" },
     { name: "Films", path: "/films" },
     { name: "Book Us", path: "/book" },
     { name: "Contact Us", path: "/contact" },
@@ -70,7 +83,7 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div
-            className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/85 transition-all duration-300
+            className={`fixed inset-0 z-100 flex flex-col items-center justify-center bg-black/85 backdrop-blur transition-all duration-300
       ${isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full"}
     `}
           >
