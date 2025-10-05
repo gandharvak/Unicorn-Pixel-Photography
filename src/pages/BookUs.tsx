@@ -148,7 +148,7 @@ const BookUs = () => {
     // ===== Submit Form =====
     setLoading(true);
 
-    fetch("http://localhost:9000/api/book-us", {
+    fetch("https://unicorn-pixel-photography-backend.onrender.com/api/book-us", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

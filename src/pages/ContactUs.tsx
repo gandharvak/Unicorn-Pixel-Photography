@@ -66,7 +66,7 @@ const ContactUs = () => {
 
     // ===== Submit Form =====
     setLoading(true);
-    fetch('http://localhost:9000/api/contact-us', {
+    fetch('https://unicorn-pixel-photography-backend.onrender.com/api/contact-us', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
