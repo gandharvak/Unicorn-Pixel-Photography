@@ -167,7 +167,7 @@ const BookUs = () => {
 
     emailjs.send(
       serviceId,
-      "template_gxaj5ou",
+      "template_mp6udw8",
       formData,
       publicKey
     )

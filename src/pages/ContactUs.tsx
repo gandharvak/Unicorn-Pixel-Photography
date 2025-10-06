@@ -73,7 +73,7 @@ const ContactUs = () => {
 
     emailjs.send(
       serviceId,
-      "template_bmvjzqr",
+      "template_96pil9s",
       formData,
       publicKey
     )
