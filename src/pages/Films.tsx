@@ -38,7 +38,7 @@ const Films = () => {
 
         {/* Video Grid */}
         <section className="py-2 px-4">
-          <div className="container mx-auto max-w-8xl">
+          <div className="md:container mx-auto max-w-8xl">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
               {youtubeVideos.map((video, index) => (
                 <Card

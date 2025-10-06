@@ -15,7 +15,7 @@ const PhotoGallery = () => {
       
       <main className="pt-20">
         <section className="py-20 px-4">
-          <div className="container mx-auto max-w-8xl">
+          <div className="md:container mx-auto max-w-8xl">
             <div className="text-center mb-16">
               <h1 className="font-playfair text-4xl md:text-6xl font-bold text-foreground mb-8 animate-fade-in">
                 Stories

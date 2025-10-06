@@ -46,7 +46,7 @@ const Portfolio = () => {
 
         {/* Masonry Photo Grid */}
         <section className="py-12 px-4 bg-gradient-to-b from-background to-secondary/20">
-          <div className="container mx-auto max-w-7xl">
+          <div className="md:container mx-auto max-w-7xl">
             <div className="columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-2 md:gap-4 space-y-2 md:space-y-4">
               {portfolioImages.map((image, index) => (
                 <div
