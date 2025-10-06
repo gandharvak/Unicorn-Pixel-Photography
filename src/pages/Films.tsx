@@ -43,7 +43,7 @@ const Films = () => {
               {youtubeVideos.map((video, index) => (
                 <Card
                   key={video.id + index}
-                  className="group cursor-pointer overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                  className="group cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-2"
                   onClick={() => openVideo(video.id)}
                 >
                   <div className="relative w-full aspect-video"> {/* Maintain 16:9 rectangle */}

@@ -65,7 +65,7 @@ const About = () => {
               <CarouselContent>
                 {team.map((member, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <Card className="hover-lift">
+                    <Card className="hover-lift hover:shadow-none">
                       <CardContent className="p-6">
                         <img 
                           src={member.photo}

@@ -25,7 +25,7 @@ const PhotoGallery = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {photoGallery.map((story) => (
-                <Card key={story.id} className="hover-lift overflow-hidden">
+                <Card key={story.id} className="hover-lift overflow-hidden hover:shadow-none">
                   <div className="aspect-[4/3] overflow-hidden">
                     <img 
                       src={story.photo}

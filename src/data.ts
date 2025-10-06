@@ -22,13 +22,13 @@ export const mapsEmbed= "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d37
 export const testimonials = [
   {
     name: "Raj & Simran",
-    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=R%20S",
+    avatar: "https://ik.imagekit.io/unicorn/feedback-photos/raj-simran.jpg?updatedAt=1759732086471",
     text: `We trusted Pixel and Navin for our wedding and the team did such an amazing job!
       Firstly their team is so friendly and talented. They left no stone unturned to capture our special day. They went out of their way to work late nights and early mornings to ensure full coverage. Their work is so artistic and lovely! There are no bad pictures that they deliver. The video editing is also really cool. Would highly recommend the team for your special day. They ensured timely delivery of all the deliverables.`
   },
   {
     name: "Aditya & Akshata",
-    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=A%20A",
+    avatar: "https://ik.imagekit.io/unicorn/feedback-photos/aditya-akshata.JPG?updatedAt=1759732086329",
     text: `
       We couldn’t have asked for a better photography team than Navin and his team to capture one of the most special days of our lives. From the very first moment, they made us feel comfortable and at ease, turning every click into a natural, heartfelt memory. Their attention to detail, creativity in framing, and ability to capture raw emotions were simply outstanding.
       Every picture tells a story — from the candid laughter to the quiet, intimate moments — and looking at the final shots feels like reliving the day all over again. The colors, the lighting, the composition… everything was just perfect. Beyond their talent, Navin and his team’s professionalism, punctuality, and friendly nature made the whole experience even more enjoyable.
@@ -36,14 +36,14 @@ export const testimonials = [
   },
   {
     name: "Omkar & Shruti",
-    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=O%20S",
+    avatar: "https://ik.imagekit.io/unicorn/feedback-photos/omkar-shruti.JPG?updatedAt=1759732086265",
     text: `We recently did our pre-wedding shoot with Unicorn Pixel Photography, and the entire experience was nothing short of exceptional. From the very beginning, the team impressed us with their professionalism, creativity, and attention to detail. They went above and beyond in every aspect — from planning the concepts and selecting the perfect locations, to guiding us through poses and capturing the most candid, beautiful moments.
       What truly stood out was the level of effort and passion they put into making our shoot special. They took the time to understand our story and vision, and turned it into a visual masterpiece that exceeded all our expectations. The team was incredibly friendly, patient, and supportive throughout the process, making us feel completely comfortable and confident in front of the camera — even though we were a bit nervous initially!
       The final photos were stunning and felt truly magical. We couldn’t be happier with the outcome and are so grateful for the memories they’ve helped us create. We wholeheartedly recommend Unicorn Pixel Photography to anyone looking for a talented, professional, and genuinely passionate team. They’re the best in the business!`
   },
   {
     name: "Shubham & Rashmi",
-    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=S%20R",
+    avatar: "https://ik.imagekit.io/unicorn/feedback-photos/shubham-rashmi.JPG?updatedAt=1759732086423",
     text: `I can’t say enough wonderful things about our wedding photographer! Navin & team. From start to finish, he truly went above and beyond, not just in capturing beautiful moments, but in making us feel completely at ease throughout the entire process.
       What stood out the most was how he made us feel so comfortable in front of the camera, which is no easy feat, especially on such an important day. The result? Stunning, natural photos that perfectly reflected our personalities and the joy of the day. Each shot had its own unique touch, and it’s clear that he has a true gift for capturing the essence of the moment. Whether it was a candid laugh or an intimate glance, every photo felt personal and special.
       In addition to the wedding, he also did our pre-wedding shoot in Udaipur and Jaipur, and once again, he did an outstanding job. The way he captured the beauty of these iconic locations, combined with our chemistry as a couple, was just magical. He truly knows how to make every shot feel unique, whether it’s the grandeur of the city or the intimacy of the moment between us.`
@@ -52,7 +52,7 @@ export const testimonials = [
     name: "Rucha & Hrishikesh",
     text: `After choosing Unicorn Pixel Photography for our wedding and other events, we had an initial meeting where we discussed all the details, including the backdrops, color schemes, and more! They provided exceptional assistance with everything we needed. We were particularly impressed by their prompt responses. Both my husband and I are quite camera-shy, but the entire team made sure we felt comfortable throughout the process. They even offered some helpful tips to help us look natural in our photos. Looking at the pictures and videos we received, we can confidently say that we made the right choice for our photographer. Their work is incredible, and we love the moments they’ve captured. Through their lenses, we can relive our beautiful wedding journey.
       `,
-    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=R%20H"
+    avatar: "https://ik.imagekit.io/unicorn/feedback-photos/rucha-hrishikesh.JPG?updatedAt=1759732086407"
   }
 ];
 

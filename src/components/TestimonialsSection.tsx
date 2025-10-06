@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import {
@@ -36,13 +35,6 @@ const TestimonialsSection = () => {
                   className="bg-gradient-to-br from-background to-secondary/30 border-border/50 transition-all duration-300 h-full"
                 >
                   <CardContent className="p-8 flex flex-col h-[400px]">
-                    {/* Stars */}
-                    {/* <div className="flex mb-4">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-                      ))}
-                    </div> */}
-                    
                     {/* Testimonial Text - Scrollable */}
                     <ScrollArea className="flex-1 mb-6 pr-4">
                       <blockquote className="font-inter text-muted-foreground leading-relaxed">

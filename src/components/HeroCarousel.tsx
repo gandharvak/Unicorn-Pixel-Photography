@@ -4,45 +4,61 @@ import { Button } from "@/components/ui/button";
 
 
 const HeroCarousel = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+ const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   const slides = [
     {
+      mobileImage: "https://ik.imagekit.io/unicorn/mobile-view-images/NAV03260.jpg?updatedAt=1759732836135",
       image: "https://blogger.googleusercontent.com/img/a/AVvXsEhIgBRNbxNZ5kh8Ecbn7zFxppciC5xUK7H5tTKwnWqBr7301d4VLSPKc6xXh5E3BjwPUwCYauLBM8r5pKRAREvX-6XowncxF6vN46dKRSnnZicoYuSVUummyKnErAstMtAcr1Qc0W9jSrNJcvb9r_291pwiHhTx-7dRiHI19bQ1-KaVY35zWjHKhCJ8sKNW",
       title: "Where Dreams Meet Reality",
       subtitle: "Capturing your most precious moments with elegance and grace."
     },
     {
+      mobileImage: "https://ik.imagekit.io/unicorn/mobile-view-images/NAV03415.jpg?updatedAt=1759732836062",
       image: "https://blogger.googleusercontent.com/img/a/AVvXsEg133Nvr3lXZQUIKlTKCob4fYMLvyzJznhiwJtNNwyW7ACs6-mRATFHtc-s0JtmsDyGgdAiuVEDGWJ4mEecgDZ-RpqRkLJAcRsjDcimerxtOJW-EXU5521JmiZypT3VAIMubamKS5BJVEId2jPjdrNEJJkNI3tWZCtS1kNl1r5aD9MZK7wcZE0iGjcxJmRy",
       title: "Love Stories Unfold",
       subtitle: "Every couple has a unique story worth telling beautifully."
     },
     {
+      mobileImage: "https://ik.imagekit.io/unicorn/mobile-view-images/NAV04863.jpg?updatedAt=1759732835983",
       image: "https://blogger.googleusercontent.com/img/a/AVvXsEgJcHFSTzGhvHh2CYd6KuQO34Rg0UvvPHqMJoZYZM2eFKluPfzDOiQvRJ6c7mpHoyVTdjnCpJsLzSHAh70dTuvgBrKAEydG9YBp3V66S1wic8A0tFoC7SSE7S9hwG5nR7hxDP0MJw2gh8peTorHSb364rkTDCLjX-YUxwQ0WopvoN3ibDSmXIz9vQmMKwp_",
       title: "Moments That Last Forever",
       subtitle: "Professional photography that preserves your cherished memories."
     },
     {
+      mobileImage: "https://ik.imagekit.io/unicorn/mobile-view-images/NAV00969.jpg?updatedAt=1759732835879",
       image: "https://blogger.googleusercontent.com/img/a/AVvXsEjZTziWwEQJJ-NSFcC_jZy7EczIszv9kLCALWjPZJz_S6JMmZHTekSqNjdG0Zx9YnG22e6lPFKYarx7uMGNK5AjILo5LG2bYkeUeynhYTl81XAWaBnPIaErOi_dLeI8NspZ5rQDfgXh2WF5sdv8qPQvOD6VZGbCSe0iFVQVU_-Ve1n81BcN4S__WXQLgrN4",
       title: "In Every Glance, a Memory",
       subtitle: "Turning fleeting emotions into timeless keepsakes."
     },
     {
+      mobileImage: "https://ik.imagekit.io/unicorn/mobile-view-images/NAV08639.jpg?updatedAt=1759732835842",
       image: "https://blogger.googleusercontent.com/img/a/AVvXsEil3GmG3TNk11F--fC37E4Wh9bAGajX59BuCBVokKPuDSErkw0loYPaRyRr3LzQiMJB_qcLaVQqZF-yZ84voNRnwGly8aWZVtfUpEpiiMGgNuQe1zlzb-nlxdStw8ACs8M2O0v26oZ_xIWUQjI-4LAIfrIUZV8NYzKHPQLdAOIn9t9pFhKuFAaRBzjC8ZPc",
       title: "Grace in Every Frame",
       subtitle: "Delicate details, captured with a photographer’s soul."
     },
     {
+      mobileImage: "https://ik.imagekit.io/unicorn/mobile-view-images/NAV00970.jpg?updatedAt=1759732835784",
       image: "https://blogger.googleusercontent.com/img/a/AVvXsEh3SpaSiTQ19uR-Sx2xQlgkOwwjJbqB5wnfl1Pote86a5EwG_jVf-DSWWmj5Kfo-Fjp5gyhJ9ITD6omDM3m2kZtkGOQRRCnx3ppVN7pGKGfHI6l2Xt3BSSgQAWc-Ejb9VI-K9j47wiewvhPxR0kFMh6BSunANcxvZVsl8g2vSyrvH4BnCe_XCEWzTKT1eV7",
       title: "Timeless Embrace",
       subtitle: "Because your love deserves to be remembered forever."
     },
     {
+      mobileImage: "https://ik.imagekit.io/unicorn/mobile-view-images/NAV06361.jpg?updatedAt=1759732835946",
       image: "https://blogger.googleusercontent.com/img/a/AVvXsEhdLuqfZu2gvkAzz6KNM81HeLQB2m6mDXq0RwOYcR_ktAI0hcu-8qB6ZXMrEB4RjV4UYJsrfpISQhRL4TPYjdS_3AuE5_fVQ_DHGIVuHlllqFfWjZovF0t2MMawpn2ilqAm4SM1BjDnpoWiC3HIwGK-60kTY7KhhsO6DXtrhvi4t7vG2ycE1UeiOiB3GeqS",
       title: "Cherish the Journey",
       subtitle: "From candid smiles to heartfelt vows — we capture it all."
     }
   ];
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768); // md breakpoint
+    handleResize(); // initial check
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
 
 
   useEffect(() => {
@@ -70,11 +86,10 @@ const HeroCarousel = () => {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? "opacity-100" : "opacity-0"
-            }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? "opacity-100" : "opacity-0"}`}
         >
           <img
-            src={slide.image}
+            src={isMobile ? slide.mobileImage : slide.image}
             alt={slide.title}
             className="w-full h-full object-cover"
           />
@@ -91,7 +106,6 @@ const HeroCarousel = () => {
               </p>
             </div>
           </div>
-
         </div>
       ))}
 
