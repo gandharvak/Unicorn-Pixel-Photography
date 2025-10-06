@@ -21,11 +21,6 @@ export const mapsEmbed= "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d37
 
 export const testimonials = [
   {
-    name: "Rutuja & Appu",
-    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=Rutuja%20Appu",
-    text: "Naveen is very patient , He clicked amazing pictures of our engagement and also helped us depict our story in most wonderful way."
-  },
-  {
     name: "Raj & Simran",
     avatar: "https://api.dicebear.com/7.x/initials/svg?seed=R%20S",
     text: `We trusted Pixel and Navin for our wedding and the team did such an amazing job!
