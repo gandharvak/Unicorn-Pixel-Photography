@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button";
 
 
 const HeroCarousel = () => {
- const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
   const slides = [
     {
-      mobileImage: "https://ik.imagekit.io/unicorn/mobile-view-images/NAV03260.jpg?updatedAt=1759732836135",
+      mobileImage: "https://ik.imagekit.io/unicorn/mobile-view-images/NAV06361.jpg?updatedAt=1759732835946",
       image: "https://blogger.googleusercontent.com/img/a/AVvXsEhIgBRNbxNZ5kh8Ecbn7zFxppciC5xUK7H5tTKwnWqBr7301d4VLSPKc6xXh5E3BjwPUwCYauLBM8r5pKRAREvX-6XowncxF6vN46dKRSnnZicoYuSVUummyKnErAstMtAcr1Qc0W9jSrNJcvb9r_291pwiHhTx-7dRiHI19bQ1-KaVY35zWjHKhCJ8sKNW",
       title: "Where Dreams Meet Reality",
       subtitle: "Capturing your most precious moments with elegance and grace."
@@ -45,7 +45,7 @@ const HeroCarousel = () => {
       subtitle: "Because your love deserves to be remembered forever."
     },
     {
-      mobileImage: "https://ik.imagekit.io/unicorn/mobile-view-images/NAV06361.jpg?updatedAt=1759732835946",
+      mobileImage: "https://ik.imagekit.io/unicorn/mobile-view-images/NAV03260.jpg?updatedAt=1759732836135",
       image: "https://blogger.googleusercontent.com/img/a/AVvXsEhdLuqfZu2gvkAzz6KNM81HeLQB2m6mDXq0RwOYcR_ktAI0hcu-8qB6ZXMrEB4RjV4UYJsrfpISQhRL4TPYjdS_3AuE5_fVQ_DHGIVuHlllqFfWjZovF0t2MMawpn2ilqAm4SM1BjDnpoWiC3HIwGK-60kTY7KhhsO6DXtrhvi4t7vG2ycE1UeiOiB3GeqS",
       title: "Cherish the Journey",
       subtitle: "From candid smiles to heartfelt vows — we capture it all."
