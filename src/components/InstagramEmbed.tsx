@@ -15,7 +15,7 @@ const InstagramEmbed = () => {
     }, []);
 
     return (
-        <section className="container mx-auto">
+        <section className="md:container mx-auto">
             <div className="text-center mb-16">
                 <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-6">
                     As Seen on Instagram

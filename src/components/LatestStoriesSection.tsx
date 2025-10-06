@@ -11,7 +11,7 @@ const LatestStoriesSection = () => {
 
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-background to-secondary/20">
-      <div className="container mx-auto max-w-6xl">
+      <div className="md:container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-6">
             Our Latest Love Stories
