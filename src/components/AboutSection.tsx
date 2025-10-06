@@ -1,5 +1,3 @@
-import React from 'react';
-import coupleImage from '@/assets/about-us/01.jpg';
 import ElegantLine from './ElegantLine';
 
 const AboutSection = () => {
@@ -40,7 +38,7 @@ const AboutSection = () => {
         {/* Right Image */}
         <div className="w-full h-full">
           <img
-            src={coupleImage}
+            src="https://blogger.googleusercontent.com/img/a/AVvXsEgqZr5ukL3gA7VnFz9Tm5dGo6m0qvU5cGhv6aQu3XrC5gn1Nre3VL33eW0klEXf7jke6jszuAA9ZpOv3vNGbd9gTsJtJ0Ph9g8EdkbLSNMRYItM5E7MHBruNDoNWwikSqEASMydOEg_chzWpXNCWH15AZYL0QFFQWt8B4QWepGJdxgExWdOP7yDSolbxDzZ"
             alt="Wedding couple"
             className="w-full h-full rounded-sm object-cover"
           />

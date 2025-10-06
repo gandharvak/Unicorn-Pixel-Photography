@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo/logoHori.png";
+import logo from "@/assets/logo/logo.png";
 
 
 const Navigation = () => {
@@ -47,11 +47,11 @@ const Navigation = () => {
       ? (isScrolled ? "bg-background/95" : "bg-transparent")
       : "bg-background/95"
       }`}>
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="font-playfair font-bold text-2xl text-primary hover:text-primary/80 transition-colors">
-            <img src={logo} width={200} />
+            <img src={logo} width={100} />
           </Link>
 
           {/* Desktop Navigation */}

@@ -12,6 +12,7 @@ import BookUs from "./pages/BookUs";
 import ContactUs from "./pages/ContactUs";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+import TopScroll from "./components/TopScroll";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      <TopScroll/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

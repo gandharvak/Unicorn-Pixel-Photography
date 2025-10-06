@@ -13,13 +13,14 @@ const LatestStoriesSection = () => {
     <section className="py-20 px-4 bg-gradient-to-b from-background to-secondary/20">
       <div className="md:container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-8">
             Our Latest Love Stories
           </h2>
+          <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
+
           <p className="  text-lg text-muted-foreground max-w-2xl mx-auto">
             Each couple brings their own unique story, and we're honored to capture these precious moments that will be treasured for generations.
           </p>
-          <div className="w-24 h-1 bg-primary mx-auto mt-6"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

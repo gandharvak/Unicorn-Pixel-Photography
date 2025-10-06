@@ -25,14 +25,14 @@ const Films = () => {
         {/* Header Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-background to-secondary/20">
           <div className="container mx-auto max-w-4xl text-center">
-            <h1 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in">
+            <h1 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-8 animate-fade-in">
               Timeless Love Captured on Film
             </h1>
+            <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
             <p className="  text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-slide-up">
               Cinematic love stories that capture the emotion, joy, and beauty of your special day.
               Each film is crafted with care to preserve your precious moments forever.
             </p>
-            <div className="w-24 h-1 bg-primary mx-auto mt-8"></div>
           </div>
         </section>
 

@@ -6,12 +6,13 @@ import { team } from "@/data";
 import AwardSection from "@/components/AwardSection";
 import Navin from "@/assets/team/navin-director-storytelling-photographer.jpg";
 import ElegantLine from "@/components/ElegantLine";
+import TeamImage from "@/components/TeamImage";
 
 const About = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      
+
       <main className="pt-20">
         {/* Founder Section */}
         {/* Founder Section */}
@@ -19,7 +20,7 @@ const About = () => {
           <div className="container mx-auto max-w-6xl">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="animate-scale-in">
-                <img 
+                <img
                   src={Navin}
                   alt="Mr. Navin Sawant - Founder"
                   className="w-full max-w-md mx-auto rounded-lg shadow-lg"
@@ -31,12 +32,12 @@ const About = () => {
                   FOUNDER, Unicorn Pixel Photography
                 </p>
               </div>
-              
+
               <div className="animate-fade-in">
                 <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-6 text-center sm:text-center lg:text-left">
                   Meet Our Founder
                 </h2>
-                <ElegantLine/>
+                <ElegantLine />
                 <p className="  text-lg text-muted-foreground mb-4 leading-relaxed">
                   At the heart of our venture is Mr. Navin Sawant, a visionary with a keen eye for detail and an unwavering passion for storytelling through the lens. With every click, he aims not just to capture an image, but to freeze a moment in time — a moment filled with emotion, love, joy, or quiet beauty.
                 </p>
@@ -67,7 +68,7 @@ const About = () => {
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                     <Card className="hover-lift hover:shadow-none">
                       <CardContent className="p-6">
-                        <img 
+                        <img
                           src={member.photo}
                           alt={member.name}
                           className="w-48 h-48 rounded-full object-cover mx-auto mb-4 shadow-md"
@@ -91,12 +92,12 @@ const About = () => {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Unicorn Pixel team believes that everyone deserves to relive their most cherished memories, and that a photograph and each film we captured has the rare ability to take you back to that very second where the light was just right, the smile was real, and the feeling unforgettable.
               </p>
-              <p className="text-lg text-muted-foreground font-bold leading-relaxed mt-4">
-                With creativity, professionalism, and a deep respect for our clients' stories, we continue to strive for excellence in every frame we take.
-              </p>
             </div>
           </div>
         </section>
+
+        
+          <TeamImage />
       </main>
 
       <Footer />

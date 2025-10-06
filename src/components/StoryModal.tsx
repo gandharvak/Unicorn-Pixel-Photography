@@ -41,13 +41,14 @@ const StoryModal = ({ selectedStory, setSelectedStory }) => {
         </button>
 
         <div className="p-8">
-          <h2 className="font-playfair text-3xl font-bold text-foreground mb-2">
+          <h2 className="font-playfair text-center text-3xl font-bold text-foreground mb-2">
             {selectedStory.coupleName}
           </h2>
-          <p className="text-primary font-semibold mb-6">
+          <p className="text-primary text-center font-semibold mb-4">
             {selectedStory.location}
           </p>
-          <p className="text-muted-foreground leading-relaxed mb-8">
+          <div className="w-24 h-1 bg-primary mx-auto mb-4"></div>
+          <p className="text-muted-foreground leading-relaxed mb-8 text-center">
             {selectedStory.fullDescription}
           </p>
 

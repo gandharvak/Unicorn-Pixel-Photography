@@ -2,7 +2,7 @@ export const teamMembers = [
   {
     name: "Shrilekha",
     role: "Creative Director",
-    photo: "https://blogger.googleusercontent.com/img/a/AVvXsEhOTZUDOL5ZedyNhmVAP1FMI-CO7QWgvwV4_4YTUFj5Slsje3m9xxncc0g-fb1Sp4-1lGATq1iKM_Ala7iwL7hnL2lDG-MOpk6xIu7qhJ_RE2UMC9kkXDARzU7mzp4d-NwgT3--VH1_FKq6u2GW_c3hz5s16GG8nHU148mxh-hfLYRQ5zFvTRX6yKfdAn4c",
+    photo: "https://blogger.googleusercontent.com/img/a/AVvXsEh_-5tEwv_qjdAqI17XYkYIaB0ZFcbQOqf46Tw-b617K0TF-3MabsQZ0P77mM3SijD5ym4AyiOOueGdXDNL_cLpjg1MpmFB8M4jaz4IEgWVgYd_BRvxdP4_XkIPEFaFMPlVrkamoEMkcadNCnzBf1xu_-plB7Fw4zhQE2XQkVahEKtRpndt3Pt8C46gheAy",
     bio: "Shrilekha is the creative force that drives our projects forward. As a creative director, she oversees the artistic vision and ensures that every element aligns with the story we aim to tell. Her innovative ideas and meticulous attention to detail elevate our work to new heights.",
   },
   {

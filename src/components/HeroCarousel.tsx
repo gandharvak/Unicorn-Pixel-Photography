@@ -98,7 +98,7 @@ const HeroCarousel = () => {
           {/* Content */}
           <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 text-center px-4 w-full">
             <div className="max-w-4xl text-white mx-auto">
-              <h1 className="font-playfair text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
+              <h1 className="font-playfair text-4xl md:text-6xl font-bold mb-4 animate-fade-in">
                 {slide.title}
               </h1>
               <p className="text-lg md:text-xl lg:text-2xl mb-8 opacity-90 animate-fade-in">
