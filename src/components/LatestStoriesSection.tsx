@@ -68,7 +68,7 @@ const LatestStoriesSection = () => {
 
         <div className="text-center mt-12">
           <Link
-            to="/gallery"
+            to="/stories"
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-2 rounded-md"
           >
             View All Stories
