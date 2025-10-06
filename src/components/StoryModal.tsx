@@ -54,7 +54,7 @@ const StoryModal = ({ selectedStory, setSelectedStory }) => {
 
           <hr className="border-border mb-8" />
 
-          <div className="columns-2 md:columns-2 lg:columns-3 gap-2 md:gap-4 space-y-2 md:space-y-4">
+          <div className="columns-1 md:columns-2 lg:columns-3 gap-2 md:gap-4 space-y-2 md:space-y-4">
             {selectedStory.galleryImages.map((image, index) => (
               <div
                 key={index}
