@@ -9,6 +9,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { address, email, mapsEmbed, phone1, phone2 } from "@/data";
+import emailjs from "emailjs-com";
+
+const serviceId = import.meta.env.VITE_SERVICE_ID;
+const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 
 const ContactUs = () => {
   const { toast } = useToast();
@@ -66,40 +70,65 @@ const ContactUs = () => {
 
     // ===== Submit Form =====
     setLoading(true);
-    fetch('https://unicorn-pixel-photography-backend.onrender.com/api/contact-us', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ name, email, phone, message })
-    })
-      .then(res => res.json())
-      .then(data => {
-        if (data.success) {
-          toast({
-            title: "Message Sent!",
-            description: "Thank you for contacting us. We'll get back to you soon.",
-          });
-          setFormData({ name: "", email: "", phone: "", message: "" }); // reset form
-        } else {
-          toast({
-            title: "Failed to send message.",
-            description: "Please try again later.",
-            variant: "destructive"
-          });
-        }
-      })
-      .catch(err => {
-        console.error('Error sending contact message:', err);
+
+    emailjs.send(
+      serviceId,
+      "template_bmvjzqr",
+      formData,
+      publicKey
+    )
+      .then(() => {
         toast({
-          title: "Something went wrong.",
-          description: "We couldn't send your message. Please try again.",
+          title: "Message Sent!",
+          description: "Thank you for contacting us. We'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      })
+      .catch(() => {
+        toast({
+          title: "Failed to send message.",
+          description: "Please try again later.",
           variant: "destructive"
         });
       })
       .finally(() => {
         setLoading(false); // Reset loading state
       });
+
+    // fetch('https://unicorn-pixel-photography-backend.onrender.com/api/contact-us', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify({ name, email, phone, message })
+    // })
+    //   .then(res => res.json())
+    //   .then(data => {
+    //     if (data.success) {
+    //       toast({
+    //         title: "Message Sent!",
+    //         description: "Thank you for contacting us. We'll get back to you soon.",
+    //       });
+    //       setFormData({ name: "", email: "", phone: "", message: "" }); // reset form
+    //     } else {
+    //       toast({
+    //         title: "Failed to send message.",
+    //         description: "Please try again later.",
+    //         variant: "destructive"
+    //       });
+    //     }
+    //   })
+    //   .catch(err => {
+    //     console.error('Error sending contact message:', err);
+    //     toast({
+    //       title: "Something went wrong.",
+    //       description: "We couldn't send your message. Please try again.",
+    //       variant: "destructive"
+    //     });
+    //   })
+    //   .finally(() => {
+    //     setLoading(false); // Reset loading state
+    //   });
   };
 
 

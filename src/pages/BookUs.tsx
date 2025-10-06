@@ -8,6 +8,10 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "emailjs-com";
+
+const serviceId = import.meta.env.VITE_SERVICE_ID;
+const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 
 const BookUs = () => {
   const { toast } = useToast();
@@ -161,22 +165,18 @@ const BookUs = () => {
     // ===== Submit Form =====
     setLoading(true);
 
-    fetch("https://unicorn-pixel-photography-backend.onrender.com/api/book-us", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.success) {
-          toast({
-            title: "Enquiry Submitted!",
-            description: "Thank you for your enquiry. We'll get back to you within 48 hours.",
-          });
-
-          // Reset form
+    emailjs.send(
+      serviceId,
+      "template_gxaj5ou",
+      formData,
+      publicKey
+    )
+      .then(() => {
+        toast({
+          title: "Enquiry Submitted!",
+          description: "Thank you for your enquiry. We'll get back to you within 48 hours.",
+        });
+         // Reset form
           setFormData({
             groomName: "",
             brideName: "",
@@ -189,21 +189,13 @@ const BookUs = () => {
             services: [],
             message: "",
           });
-        } else {
-          toast({
+      })
+      .catch(() => {
+        toast({
             title: "Failed to send booking request!",
             description: "Please try again.",
             variant: "destructive",
           });
-        }
-      })
-      .catch((err) => {
-        console.error("Error sending booking request:", err);
-        toast({
-          title: "An error occurred.",
-          description: "Could not send the form. Try again later.",
-          variant: "destructive",
-        });
       })
       .finally(() => {
         setLoading(false); // Reset loading state
