@@ -203,7 +203,7 @@ const BookUs = () => {
   };
 
 
-  const eventOptions = ["Haldi", "Mehendi", "Sangeet", "Wedding", "Reception", "Engagement", "Other"];
+  const eventOptions = ["Haldi", "Mehendi", "Sangeet", "Wedding", "Reception", "Engagement", "Prewedding", "Other"];
   const serviceOptions = ["Photography", "Films", "Both"];
 
 
