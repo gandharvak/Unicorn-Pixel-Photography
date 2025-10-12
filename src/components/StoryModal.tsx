@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import ScrollToTop from "./ScrollToTop";
+import Masonry from "react-masonry-css";
+
+
+const breakpointColumnsObj = {
+  // default: 3,
+  1024: 3,
+  768: 2,
+  0: 1,
+};
 
 const StoryModal = ({ selectedStory, setSelectedStory }) => {
   const [fullscreenIndex, setFullscreenIndex] = useState<number | null>(null);
@@ -54,7 +63,7 @@ const StoryModal = ({ selectedStory, setSelectedStory }) => {
 
           <hr className="border-border mb-8" />
 
-          <div className="columns-1 md:columns-2 lg:columns-3 gap-2 md:gap-4 space-y-2 md:space-y-4">
+          {/* <div className="columns-1 md:columns-2 lg:columns-3 gap-2 md:gap-4 space-y-2 md:space-y-4">
             {selectedStory.galleryImages.map((image, index) => (
               <div
                 key={index}
@@ -68,7 +77,44 @@ const StoryModal = ({ selectedStory, setSelectedStory }) => {
                 />
               </div>
             ))}
-          </div>
+          </div> */}
+
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {selectedStory.galleryImages.map((image, index) => (
+              <div
+                key={index}
+                className="rounded-lg overflow-hidden cursor-pointer group"
+                onClick={() => openImage(index)}
+              >
+                <img
+                  src={image}
+                  alt={`${selectedStory.coupleName} - Photo ${index + 1}`}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+            ))}
+          </div> */}
+
+          <Masonry
+  breakpointCols={breakpointColumnsObj}
+  className="flex w-auto gap-4"
+  columnClassName="bg-clip-padding"
+>
+  {selectedStory.galleryImages.map((image, index) => (
+    <div
+      key={index}
+      className="mb-4 rounded-lg overflow-hidden cursor-pointer group"
+      onClick={() => openImage(index)}
+    >
+      <img
+        src={image}
+        alt={`${selectedStory.coupleName} - Photo ${index + 1}`}
+        className="w-full h-auto object-cover group-hover:scale-[1.03] transition-transform duration-300"
+      />
+    </div>
+  ))}
+</Masonry>
+
         </div>
       </div>
 

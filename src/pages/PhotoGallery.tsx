@@ -24,8 +24,8 @@ const PhotoGallery = () => {
               A Love Story Worth Capturing
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mt-2 animate-fade-in">
-              A wedding is more than a celebration—it’s a beautiful story of love, connection, and new beginnings.
-              We capture not just how it looks, but how it feels—timeless moments made eternal.
+              A wedding is more than a celebration. It’s a beautiful story of love, connection, and new beginnings.
+              We capture not just how it looks, but how it feels timeless moments made eternal.
             </p>
           </div>
 
