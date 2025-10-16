@@ -2,14 +2,39 @@ import React, { useEffect } from 'react';
 
 const InstagramEmbed = () => {
     useEffect(() => {
-        // Dynamically load the widget script (loads once)
+        // Inject script once
         const script = document.createElement('script');
         script.src = 'https://widgets.sociablekit.com/instagram-feed/widget.js';
         script.defer = true;
         document.body.appendChild(script);
 
-        // Optional: Clean up script on unmount
+        // Elements we want to remove
+        const selectors = [
+            '.sk_branding',
+            '.instagram-user-root-container',
+            '.sk-ig-bottom-btn-container',
+        ];
+
+        const interval = setInterval(() => {
+            let allRemoved = true;
+
+            selectors.forEach((selector) => {
+                const el = document.querySelector(selector);
+                if (el) {
+                    el.remove();
+                } else {
+                    allRemoved = false;
+                }
+            });
+
+            // If all targeted elements are gone, stop checking
+            if (allRemoved) {
+                clearInterval(interval);
+            }
+        }, 500);
+
         return () => {
+            clearInterval(interval);
             document.body.removeChild(script);
         };
     }, []);

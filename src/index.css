@@ -188,3 +188,6 @@ All colors MUST be HSL. Romantic photography website design system.
     box-shadow: var(--shadow-hover);
   }
 }
+
+
+.sk_branding,.instagram-user-root-container,.sk-ig-bottom-btn-container{display:none !important;}
