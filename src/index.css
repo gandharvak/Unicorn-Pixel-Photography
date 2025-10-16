@@ -191,3 +191,11 @@ All colors MUST be HSL. Romantic photography website design system.
 
 
 .sk_branding,.instagram-user-root-container,.sk-ig-bottom-btn-container{display:none !important;}
+
+/* Hide SociableKit hover overlay */
+.sk-ig-overlay,
+.sk-ig-post-hover {
+  display: none !important;
+  pointer-events: none !important; /* optional, avoid blocking clicks */
+}
+
