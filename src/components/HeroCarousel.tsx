@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import { useNavigate } from "react-router-dom";
 
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const navigate = useNavigate();
 
   const slides = [
     {
@@ -104,6 +105,7 @@ const HeroCarousel = () => {
               <p className="text-lg md:text-xl lg:text-2xl mb-8 opacity-90 animate-fade-in">
                 {slide.subtitle}
               </p>
+              {/* <Button size="lg" onClick={()=> navigate('/book')}>RESERVE YOUR DATE <ArrowRight/></Button> */}
             </div>
           </div>
         </div>
@@ -138,6 +140,7 @@ const HeroCarousel = () => {
           />
         ))}
       </div>
+
     </div>
   );
 };

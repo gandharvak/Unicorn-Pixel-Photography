@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo/logo.png";
+import { motion } from "framer-motion";
 
 
 const Navigation = () => {
@@ -51,7 +52,13 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="font-playfair font-bold text-2xl text-primary hover:text-primary/80 transition-colors">
-            <img src={logo} width={100} />
+            {/* <img src={logo} width={100} /> */}
+            <motion.img
+              layoutId="logo"
+              src={logo}
+              alt="Logo"
+              className="w-24 object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}
