@@ -10,30 +10,63 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import LogoIntro from "@/components/LogoIntro";
 
+// const Home = () => {
+//   const [showSite, setShowSite] = useState(false);
+
+//   return (
+//     <div className="min-h-screen">
+//       {!showSite && <LogoIntro onComplete={() => setShowSite(true)} />}
+
+//       {
+//         showSite && (
+//           <motion.main
+//             initial={{ opacity: 0 }}
+//             animate={{ opacity: 1 }}
+//             transition={{ duration: 1 }}
+//           >
+
+//             <Navigation />
+//             <main>
+//               <HeroCarousel />
+//               <AboutSection />
+//               <TestimonialsSection />
+//               <ElegantQuote />
+//               <LatestStoriesSection />
+//               <InstagramEmbed />
+//             </main>
+//             <Footer />
+//           </motion.main>
+//         )
+//       }
+
+//     </div>
+//   );
+// };
+
 const Home = () => {
-    const [showSite, setShowSite] = useState(false);
+  const [animationDone, setAnimationDone] = useState(false);
 
   return (
     <div className="min-h-screen">
-        {!showSite && <LogoIntro onAnimationComplete={() => setShowSite(true)} />}
+      <Navigation />
 
-          {
-        showSite && (
-          <>
-          
-          <Navigation />
-          <main>
-            <HeroCarousel />
-            <AboutSection />
-            <TestimonialsSection />
-            <ElegantQuote/>
-            <LatestStoriesSection />
-            <InstagramEmbed/>
-          </main>
-          <Footer />
-          </>
-        )
-          }
+      <motion.main
+        initial={{ opacity: 0 }}
+        animate={{ opacity: animationDone ? 1 : 0 }}
+        transition={{ duration: 1 }}
+      >
+
+        <main>
+          <HeroCarousel />
+          <AboutSection />
+          <TestimonialsSection />
+          <ElegantQuote />
+          <LatestStoriesSection />
+          <InstagramEmbed />
+        </main>
+        <Footer />
+      </motion.main>
+      <LogoIntro onComplete={() => setAnimationDone(true)} />
 
     </div>
   );
