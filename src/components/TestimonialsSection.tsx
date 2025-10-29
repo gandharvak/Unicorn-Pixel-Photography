@@ -48,7 +48,7 @@ const TestimonialsSection = () => {
                         <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
                         <AvatarFallback>{testimonial.name.split(" ").map(n => n[0]).join("")}</AvatarFallback>
                       </Avatar>
-                      <p className="font-playfair font-semibold text-foreground text-lg">
+                      <p className="font-playfair font-semibold text-primary text-lg">
                         {testimonial.name}
                       </p>
                     </div>

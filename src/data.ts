@@ -29,8 +29,7 @@ export const testimonials = [
   {
     name: "Aditya & Akshata",
     avatar: "https://ik.imagekit.io/unicorn/feedback-photos/aditya-akshata.JPG?updatedAt=1759732086329",
-    text: `
-      We couldn’t have asked for a better photography team than Navin and his team to capture one of the most special days of our lives. From the very first moment, they made us feel comfortable and at ease, turning every click into a natural, heartfelt memory. Their attention to detail, creativity in framing, and ability to capture raw emotions were simply outstanding.
+    text: `We couldn’t have asked for a better photography team than Navin and his team to capture one of the most special days of our lives. From the very first moment, they made us feel comfortable and at ease, turning every click into a natural, heartfelt memory. Their attention to detail, creativity in framing, and ability to capture raw emotions were simply outstanding.
       Every picture tells a story — from the candid laughter to the quiet, intimate moments — and looking at the final shots feels like reliving the day all over again. The colors, the lighting, the composition… everything was just perfect. Beyond their talent, Navin and his team’s professionalism, punctuality, and friendly nature made the whole experience even more enjoyable.
       We are truly grateful for the magic they created with their lens, and we’ll cherish these photographs for a lifetime. Highly recommended to anyone who wants not just pictures, but timeless memories.`
   },
@@ -50,8 +49,7 @@ export const testimonials = [
   },
   {
     name: "Rucha & Hrishikesh",
-    text: `After choosing Unicorn Pixel Photography for our wedding and other events, we had an initial meeting where we discussed all the details, including the backdrops, color schemes, and more! They provided exceptional assistance with everything we needed. We were particularly impressed by their prompt responses. Both my husband and I are quite camera-shy, but the entire team made sure we felt comfortable throughout the process. They even offered some helpful tips to help us look natural in our photos. Looking at the pictures and videos we received, we can confidently say that we made the right choice for our photographer. Their work is incredible, and we love the moments they’ve captured. Through their lenses, we can relive our beautiful wedding journey.
-      `,
+    text: `After choosing Unicorn Pixel Photography for our wedding and other events, we had an initial meeting where we discussed all the details, including the backdrops, color schemes, and more! They provided exceptional assistance with everything we needed. We were particularly impressed by their prompt responses. Both my husband and I are quite camera-shy, but the entire team made sure we felt comfortable throughout the process. They even offered some helpful tips to help us look natural in our photos. Looking at the pictures and videos we received, we can confidently say that we made the right choice for our photographer. Their work is incredible, and we love the moments they’ve captured. Through their lenses, we can relive our beautiful wedding journey.`,
     avatar: "https://ik.imagekit.io/unicorn/feedback-photos/rucha-hrishikesh.JPG?updatedAt=1759732086407"
   }
 ];

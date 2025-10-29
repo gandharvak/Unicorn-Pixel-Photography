@@ -29,7 +29,7 @@ useEffect(() => {
 
   return (
     <motion.div
-      className="fixed inset-0 flex items-center justify-center bg-white z-50"
+     className="fixed inset-0 flex items-center justify-center bg-white z-[60] pointer-events-none"
        animate={fadeOut ? { opacity: 0 } : { opacity: 1 }}
       transition={{ delay: 2.5, duration: 0.5 }}
     >
