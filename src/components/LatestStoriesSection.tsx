@@ -44,18 +44,18 @@ const LatestStoriesSection = () => {
                 <div className="flex items-center mb-3">
                   <span className="text-muted-foreground text-sm font-normal">{story.location}</span>
                 </div>
-                <p className="  text-muted-foreground leading-relaxed mb-6">
+                <p className="  text-muted-foreground leading-relaxed line-clamp-2 mb-6">
                   {story.description}
                 </p>
 
 
                 <Button
                   variant="ghost"
-                  className="group/btn text-primary hover:text-primary font-semibold h-auto"
+                  className="group/btn pl-0 text-primary hover:text-primary font-semibold h-auto"
                   onClick={() => setSelectedStory(story)}
                 >
                   View Story
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                 </Button>
               </CardContent>
             </Card>

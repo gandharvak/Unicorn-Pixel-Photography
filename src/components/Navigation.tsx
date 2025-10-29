@@ -53,10 +53,10 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="font-playfair font-bold text-2xl text-primary hover:text-primary/80 transition-colors">
             {/* <img src={logo} width={100} /> */}
-            <motion.img
-              layoutId="logo"
+            <img
               src={logo}
               alt="Logo"
+              id="navbar-logo"
               className="w-24 object-contain"
             />
           </Link>
